@@ -20,7 +20,12 @@ function sendQuickReply(psid, text, title, postback_payload) {
   payload.recipient = {
     id: psid
   }
- console.log("Here is the RecipientID: "+payload.recipient.id);
+
+ console.log(">>>Here is the RecipientID: "+payload.recipient.id);
+ console.log(">>>Here is the text: "+text);
+ console.log(">>>Here is the title of quick reply: "+title);
+ console.log(">>>And postback payload: "+postback_payload);
+
   payload.message = {
     text: text,
     quick_replies: [{
