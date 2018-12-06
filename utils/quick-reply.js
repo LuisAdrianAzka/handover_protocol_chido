@@ -22,7 +22,6 @@ function sendQuickReply(psid, text, title, postback_payload) {
   }
 
   payload.message = {
-    is_echo:true,
     text: text,
     quick_replies: [{
         content_type: 'text',
