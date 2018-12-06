@@ -90,7 +90,7 @@ app.post('/webhook', (req, res) => {
 
       } else if (event.pass_thread_control) {
 
-        // thread control was passed back to bot manually in Page inbox
+        // thread control was passed back to bot manually in Page inbox :3
         text = 'De vuelta al chat, ¿dime que hago por ti? \n\n Presiona "Ir al Community" para pasar el control a inbox.';
         title = 'Ir al Community';
         payload = 'pass_to_inbox';
