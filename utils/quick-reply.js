@@ -18,7 +18,7 @@ function sendQuickReply(psid, text, title, postback_payload) {
   let payload = {};
 
   payload.recipient = {
-    id: "Kuzaikun"
+    id: psid
   }
 
  console.log(">>>Here is the RecipientID: "+payload.recipient.id);
