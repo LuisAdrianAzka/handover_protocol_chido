@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Handover Protocol to Page Inbox example",
   "main": "index.js",
+  "scripts":{
+    "start": "node index.js"
+  },
   "author": "Tudor Săpunaru",
   "contributors": [
     {
