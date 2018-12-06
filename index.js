@@ -26,7 +26,7 @@ app.get('/webhook', (req, res) => {
   if (req.query['hub.verify_token'] === env.VERIFY_TOKEN) {
     console.log("Webhook verificado");
     res.send(req.query['hub.challenge']);
-    
+
   }else {
     console.error("No concuerda algo");
     res.json({
