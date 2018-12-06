@@ -1,4 +1,4 @@
 module.exports = {
   "PAGE_ACCESS_TOKEN": "<YOUR PAGE ACCESS TOKEN>",
   "VERIFY_TOKEN": "YOUR WEBHOOK VERIFY TOKEN"
-}  
+}
