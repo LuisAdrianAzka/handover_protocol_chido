@@ -3,6 +3,8 @@
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
+ *
+ * Kuzaikun: I modified a bit XD... but the logic is the same
  */
 'use strict';
 
@@ -79,8 +81,8 @@ app.post('/webhook', (req, res) => {
 
         // quick reply to pass to Page inbox was clicked
         let page_inbox_app_id = 263902037430900;
-        text = 'The Primary Receiver is passing control to the Page Inbox. \n\n Tap "Take From Inbox" to have the Primary Receiver take control back.';
-        title = 'Take From Inbox';
+        text = 'A la brevedad un CM te contestará \n\n Presiona "Regresar" para volver a la conversación';
+        title = 'Regresar';
         payload = 'take_from_inbox';
 
         sendQuickReply(psid, text, title, payload);
@@ -89,8 +91,8 @@ app.post('/webhook', (req, res) => {
       } else if (event.pass_thread_control) {
 
         // thread control was passed back to bot manually in Page inbox
-        text = 'You passed control back to the Primary Receiver by marking "Done" in the Page Inbox. \n\n Tap "Pass to Inbox" to pass control to the Page Inbox.';
-        title = 'Pass to Inbox';
+        text = 'De vuelta al chat, ¿dime que hago por ti? \n\n Presiona "Ir al Community" para pasar el control a inbox.';
+        title = 'Ir al Community';
         payload = 'pass_to_inbox';
 
         sendQuickReply(psid, text, title, payload);
@@ -98,8 +100,8 @@ app.post('/webhook', (req, res) => {
       } else if (message && !message.is_echo) {
 
         // default
-        text = 'Welcome! The bot is currently in control. \n\n Tap "Pass to Inbox" to pass control to the Page Inbox.';
-        title = 'Pass to Inbox';
+        text = 'Hola este es el Handover test. \n\n Presiona "Ir al Community" para pasar el control a inbox.';
+        title = 'Ir al Community';
         payload = 'pass_to_inbox';
 
         sendQuickReply(psid, text, title, payload);
