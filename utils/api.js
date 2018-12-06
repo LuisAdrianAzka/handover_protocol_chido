@@ -1,8 +1,6 @@
 /**
- * Copyright 2017-present, Facebook, Inc. All rights reserved.
- *
- * This source code is licensed under the license found in the
- * LICENSE file in the root directory of this source tree.
+ * It's used for get the API calls
+ * initialize Graph Facebook calls :3
  */
 'use strict';
 const env = require('../env'),
@@ -30,7 +28,7 @@ function call (path, payload, callback) {
     if (!error && response.statusCode === 200) {
       console.log('Message sent succesfully');
     } else {
-      console.error('Error: ' + error);        
+      console.error('Error: ' + error);
     }
     callback(body);
   });

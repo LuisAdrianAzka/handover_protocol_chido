@@ -1,19 +1,18 @@
 {
-  "name": "hop2inbox_bot",
+  "name": "HandoverBotTest",
   "version": "0.0.1",
   "description": "Handover Protocol to Page Inbox example",
   "main": "index.js",
   "scripts":{
     "start": "node index.js"
   },
-  "author": "Tudor Săpunaru",
+  "author": "Kuzaikun",
   "contributors": [
     {
-      "name": "Alex Muramoto",
-      "url": "https://www.github.com/amuramoto"
+      "name": "Alex Muramoto AND a lot of web references"
     }
   ],
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
