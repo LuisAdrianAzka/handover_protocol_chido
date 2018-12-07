@@ -98,12 +98,21 @@ app.post('/webhook', (req, res) => {
         sendQuickReply(psid, text, title, payload);
 
       } else if (message && !message.is_echo) {
-        console.log("Message: "+message+" Message echo: "+message.is_echo);
+        //Aquí debería estar el bot
+        const webhook_events = request.body.entry[0];
+        console.log('webhook_events : ', webhook_events);
         // default
         text = 'Hola este es el Handover test. \n\n Presiona "Ir al Community" para pasar el control a inbox.';
         title = 'Ir al Community';
         payload = 'pass_to_inbox';
 
+        /*Si (message&&!message.is_echo&&message=postback_community_manager){
+        *
+        *sendQuickReply(psid, text, title, payload);
+        *}
+        */
+
+        //
         sendQuickReply(psid, text, title, payload);
       }
 
