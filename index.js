@@ -41,9 +41,9 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook', (req, res) => {
 
   // parse messaging array
-  console.log('WutHPPN');
+  console.log('Ha ocurrido un evento');
   const webhook_events = req.body.entry[0];
-
+  console.log('WH: '+webhook_events);
   // initialize quick reply properties
   let text, title, payload;
 
