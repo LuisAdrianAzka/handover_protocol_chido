@@ -42,7 +42,7 @@ app.post('/webhook', (req, res) => {
 
   // parse messaging array
   const webhook_events = req.body.entry[0];
-console.log("Console log: "+ res+ " REQ "+req);
+
   // initialize quick reply properties
   let text, title, payload;
 
@@ -57,8 +57,8 @@ console.log("Console log: "+ res+ " REQ "+req);
 
       if (message && message.quick_reply && message.quick_reply.payload == 'take_from_inbox') {
         // quick reply to take from Page inbox was clicked
-        text = 'The Primary Receiver is taking control back. \n\n Tap "Pass to Inbox" to pass thread control to the Page Inbox.';
-        title = 'Pass to Inbox';
+        text = 'Estás volviendo al chat. \n\n presiona "Community Manager" para regresar';
+        title = 'Community Manager';
         payload = 'pass_to_inbox';
 
         sendQuickReply(psid, text, title, payload);
@@ -98,7 +98,7 @@ console.log("Console log: "+ res+ " REQ "+req);
         sendQuickReply(psid, text, title, payload);
 
       } else if (message && !message.is_echo) {
-
+        console.log("Message: "+message+" Message echo: "+message.is_echo);
         // default
         text = 'Hola este es el Handover test. \n\n Presiona "Ir al Community" para pasar el control a inbox.';
         title = 'Ir al Community';
