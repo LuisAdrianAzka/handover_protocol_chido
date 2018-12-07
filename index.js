@@ -98,10 +98,8 @@ app.post('/webhook', (req, res) => {
         sendQuickReply(psid, text, title, payload);
 
       } else if (message && !message.is_echo) {
-        console.log("Aquí debería estar el bot");
-        /*
 
-        //Aquí debería estar el bot
+
         const webhook_events = req.body.entry[0];
         console.log('webhook_events : ', webhook_events);
         // default
@@ -115,7 +113,7 @@ app.post('/webhook', (req, res) => {
         *}
         */
 
-        //sendQuickReply(psid, text, title, payload);
+        sendQuickReply(psid, text, title, payload);
       }
 
     });
