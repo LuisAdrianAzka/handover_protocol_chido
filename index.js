@@ -80,7 +80,7 @@ app.post('/webhook', (req, res) => {
       if (message && message.quick_reply && message.quick_reply.payload == 'pass_to_inbox') {
 
         // quick reply to pass to Page inbox was clicked
-        let page_inbox_app_id = 263902037430900;
+        let page_inbox_app_id = 339142566904062;
         text = 'A la brevedad un CM te contestará \n\n Presiona "Regresar" para volver a la conversación';
         title = 'Regresar';
         payload = 'take_from_inbox';
