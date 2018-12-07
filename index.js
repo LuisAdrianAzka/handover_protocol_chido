@@ -41,7 +41,7 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook', (req, res) => {
 
   // parse messaging array
-  console.log('Ha ocurrido un evento'+req.body);
+  console.log('Ha ocurrido un evento'+req.body.CommunityHandover);
   const webhook_events = req.body.entry[0];
   console.log('WH: '+webhook_events);
   // initialize quick reply properties
