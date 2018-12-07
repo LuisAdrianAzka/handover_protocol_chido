@@ -30,9 +30,9 @@ app.get('/webhook', (req, res) => {
     res.send(req.query['hub.challenge']);
 
   }else {
-    console.error("No concuerda algo");
+    console.error("Revisa el Token por favor");
     res.json({
-      message:"Este.... no sirve el token :("
+      message:"Revisa el Token por favor"
     });
   }
 });
@@ -41,7 +41,7 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook', (req, res) => {
 
   // parse messaging array
-  console.log('Ha ocurrido un evento '+req.body.entry);
+  console.log('Ha ocurrido un evento');
   const webhook_events = req.body.entry[0];
   console.log('WH: '+webhook_events);
   // initialize quick reply properties
