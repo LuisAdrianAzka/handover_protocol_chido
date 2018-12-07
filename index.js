@@ -42,7 +42,7 @@ app.post('/webhook', (req, res) => {
 
   // parse messaging array
   const webhook_events = req.body.entry[0];
-console.log("Console log: "+webhook_events);
+console.log("Console log: "+ res+ " REQ "+req);
   // initialize quick reply properties
   let text, title, payload;
 
