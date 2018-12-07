@@ -99,8 +99,8 @@ app.post('/webhook', (req, res) => {
 
       } else if (message && !message.is_echo) {
         //Aquí debería estar el bot
-        const webhook_events = request.body.entry[0];
-        console.log('webhook_events : ', webhook_events);
+        //const webhook_events = request.body.entry[0];
+        //console.log('webhook_events : ', webhook_events);
         // default
         text = 'Hola este es el Handover test. \n\n Presiona "Ir al Community" para pasar el control a inbox.';
         title = 'Ir al Community';
