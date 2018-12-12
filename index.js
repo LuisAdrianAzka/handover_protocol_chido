@@ -44,7 +44,7 @@ app.post('/webhook', (req, res) => {
   console.log('Ha ocurrido un evento body_entry '+req.body.entry);
   console.log('Ha ocurrido un evento help '+req.body.help);
   console.log('Ha ocurrido un evento CommunityHandover '+req.body.help);
-  const webhook_events = req.body.entry[0];
+  const webhook_events = req.body.entry[0]; ///---------> REQUEST BODIY?
   console.log('WH: '+webhook_events);
   // initialize quick reply properties
   let text, title, payload;
