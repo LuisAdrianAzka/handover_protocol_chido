@@ -15,7 +15,7 @@ function passThreadControl (userPsid, targetAppId) {
     },
     target_app_id: targetAppId
   };
-
+//Para matar al bot XD
   api.call('/pass_thread_control', payload, () => {});
 }
 
@@ -26,7 +26,7 @@ function takeThreadControl (userPsid) {
       id: userPsid
     }
   };
-
+//Para revivir al bot
   api.call('/take_thread_control', payload, () => {});
 }
 

@@ -87,7 +87,7 @@ app.post('/webhook', (req, res) => {
         text = 'A la brevedad un CM te contestará \n\n Presiona "Regresar" para volver a la conversación';
         title = 'Regresar';
         payload = 'take_from_inbox';
-
+        console.log('The PSID is: '+psid);
         sendQuickReply(psid, text, title, payload);
         HandoverProtocol.passThreadControl(psid, page_inbox_app_id);
 
