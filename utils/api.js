@@ -27,7 +27,7 @@ function call (path, payload, callback) {
     console.log(body)
     if (!error && response.statusCode === 200) {
       console.log('Message sent succesfully');
-      console.log('Its a path: 'graph_url + path);
+      console.log('Its a path: '+graph_url + path);
     } else {
       console.error('Error: ' + error);
     }
